@@ -1,0 +1,104 @@
+/* Mielina's website: one readable column, light and dark, in the app's blue. */
+
+:root {
+  color-scheme: light dark;
+  --text: #1b1c1f;
+  --muted: #5a5e66;
+  --background: #ffffff;
+  --link: #1565c0;
+  --rule: #d9dde3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e3e4e8;
+    --muted: #a9adb5;
+    --background: #121316;
+    --link: #90caf9;
+    --rule: #33363c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px;
+  background: var(--background);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+
+.top,
+main,
+footer {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.home {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+a {
+  color: var(--link);
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin: 1.5rem 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 2rem 0 0.5rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2rem 0;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}

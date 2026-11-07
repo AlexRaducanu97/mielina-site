@@ -1,0 +1,26 @@
+# Mielina's website, served by GitHub Pages from the main branch's root at
+# https://alexraducanu97.github.io/mielina-site/
+title: Mielina
+description: Mielina helps you keep track of your symptoms and your medication.
+lang: en
+
+# The repository's own notes stay out of the site.
+exclude:
+  - README.md
+
+# The policy pages are copies of the app's docs/privacy.md and
+# docs/privacy.ro.md, kept byte for byte, so their language and their
+# counterpart in the other language are set here rather than in the files.
+defaults:
+  - scope:
+      path: privacy.md
+    values:
+      lang: en
+      counterpart: privacy.ro.html
+      counterpart_label: Română
+  - scope:
+      path: privacy.ro.md
+    values:
+      lang: ro
+      counterpart: privacy.html
+      counterpart_label: English
